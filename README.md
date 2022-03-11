@@ -2,13 +2,13 @@
 
 In this project, we discuss efforts that resulted in a system that takes advantage of Convolutional Neural Networks to recognize hand gestures based on depth images captured by the camera. It is intended to support and use technologies especially in the field of education and translation for helping deaf and mute people to communicate with ease. The program is developed using a science field of computer vision, as well as additional libraries which are: Tensorflow, Numpy, keras and OpenCV.
 
-![alt text](link here)
+![alt text](https://github.com/Hadiosj/Hand-Gesture-Recognition/blob/2c47db305b7d33c6e1950dbfdc34a39997c61a09/deliverables/gesture_names.jpg)
 
 #### Training the model
 
 VGG16 has a very good architecture for benchmarking on a particular task, while also being available freely on the internet, which makes it a convenable choice for various applications, thus we end up using it in this project.
 
-![alt text](link here)
+![alt text](https://github.com/Hadiosj/Hand-Gesture-Recognition/blob/2c47db305b7d33c6e1950dbfdc34a39997c61a09/deliverables/VGG16.jpg)
 
 A convolutional neural network is built using Keras & TensorFlow. Starting with the VGG-16 pre-trained model, and adding 4 dense layers along with a dropout layer on top.
 The model is then saved and loaded into a hdf5 file.
@@ -19,13 +19,13 @@ The technique used to extract gestures from real time images is ‘background su
 Background subtraction is implemented using the libraries OpenCV to use the feed from a camera connected to the computer, and the copy library to detect and draw contours of the hand.
 
 Background Initialization:
-![alt text](link here)
+![alt text](https://github.com/Hadiosj/Hand-Gesture-Recognition/blob/2c47db305b7d33c6e1950dbfdc34a39997c61a09/deliverables/BG_init.jpg)
 
 Background Update:
-![alt text](link here)
+![alt text](https://github.com/Hadiosj/Hand-Gesture-Recognition/blob/2c47db305b7d33c6e1950dbfdc34a39997c61a09/deliverables/BG_update.jpg)
 
 Finally, the prediction of the gesture detected is made and the result is translated to a text written in a separate .txt file which can be directly used for chat and communication, in addition to displaying the prediction and its level of confidence on the screen:
 
-![alt text](link here)
-![alt text](link here)
-![alt text](link here)
+![alt text](https://github.com/Hadiosj/Hand-Gesture-Recognition/blob/2c47db305b7d33c6e1950dbfdc34a39997c61a09/deliverables/detection_1.jpg)
+![alt text](https://github.com/Hadiosj/Hand-Gesture-Recognition/blob/2c47db305b7d33c6e1950dbfdc34a39997c61a09/deliverables/detection_2.jpg)
+![alt text](https://github.com/Hadiosj/Hand-Gesture-Recognition/blob/2c47db305b7d33c6e1950dbfdc34a39997c61a09/deliverables/detection_3.jpg)
