@@ -7,21 +7,25 @@ In this project, we discuss efforts that resulted in a system that takes advanta
 #### Training the model
 
 VGG16 has a very good architecture for benchmarking on a particular task, while also being available freely on the internet, which makes it a convenable choice for various applications, thus we end up using it in this project.
+A convolutional neural network is built using Keras & TensorFlow. Starting with the VGG-16 pre-trained model, and adding 4 dense layers along with a dropout layer on top.
+The model is then saved and loaded into a hdf5 file.
 
 ![alt text](https://github.com/Hadiosj/Hand-Gesture-Recognition/blob/2c47db305b7d33c6e1950dbfdc34a39997c61a09/deliverables/VGG16.jpg)
 
-A convolutional neural network is built using Keras & TensorFlow. Starting with the VGG-16 pre-trained model, and adding 4 dense layers along with a dropout layer on top.
-The model is then saved and loaded into a hdf5 file.
 
 #### Executing the model on live hand gestures
 
 The technique used to extract gestures from real time images is ‘background subtraction’, a common and widely used technique for generating a foreground mask (namely, a binary image containing the pixels belonging to moving objects in the scene) by using static cameras. As the name suggests, BS calculates the foreground mask performing a subtraction between the current frame and a background model, containing the static part of the scene or, more in general, everything that can be considered as background given the characteristics of the observed scene.
 Background subtraction is implemented using the libraries OpenCV to use the feed from a camera connected to the computer, and the copy library to detect and draw contours of the hand.
 
+
 Background Initialization:
+
 ![alt text](https://github.com/Hadiosj/Hand-Gesture-Recognition/blob/2c47db305b7d33c6e1950dbfdc34a39997c61a09/deliverables/BG_init.jpg)
 
+
 Background Update:
+
 ![alt text](https://github.com/Hadiosj/Hand-Gesture-Recognition/blob/2c47db305b7d33c6e1950dbfdc34a39997c61a09/deliverables/BG_update.jpg)
 
 Finally, the prediction of the gesture detected is made and the result is translated to a text written in a separate .txt file which can be directly used for chat and communication, in addition to displaying the prediction and its level of confidence on the screen:
